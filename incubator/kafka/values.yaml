@@ -4,7 +4,7 @@
 
 Replicas: 3
 Image: "solsson/kafka"
-ImageTag: "0.11.0.0"
+ImageTag: "0.11.0.1"
 ImagePullPolicy: "IfNotPresent"
 resources: {}
   # limits:

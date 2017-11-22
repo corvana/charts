@@ -1,3 +1,10 @@
+# Purpose
+This branch has the upgraded zookeeper packaged with helm packaged as a dep chart for kafka.
+
+# Install
+
+helm install --namespace kafka --name kafka --set global.namespace=kafka .
+
 # Apache Kafka Helm Chart
 
 This is an implementation of Kafka StatefulSet found here:
@@ -55,7 +62,7 @@ following configurable parameters:
 | ----------------------- | ---------------------------------- | ---------------------------------------------------------- |
 | `Image`                 | Kafka Container image name         | `solsson/kafka`                                            |
 | `ImageTag`              | Kafka Container image tag          | `0.11.0.0`                                                 |
-| `ImagePullPolicy`       | Kafka Container pull policy        | `Always`                                                   |
+| `ImagePullPolicy`       | Kafka Container pull policy        | `IfNotPresent`                                             |
 | `Replicas`              | Kafka Brokers                      | `3`                                                        |
 | `Component`             | Kafka k8s selector key             | `kafka`                                                    |
 | `resources`             | Kafka resource requests and limits | `{}`                                                       |
