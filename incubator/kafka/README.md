@@ -3,6 +3,7 @@ This branch has the upgraded zookeeper packaged with helm packaged as a dep char
 
 # Install
 
+mkdir -p charts && helm package -d charts ../zookeeper
 helm install --namespace kafka --name kafka --set global.namespace=kafka .
 
 # Apache Kafka Helm Chart
